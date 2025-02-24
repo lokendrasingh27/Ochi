@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+  @font-face {
+    font-family: neu;
+    src: url(/NeueMontreal-Regular.ttf);
+  }
+  @font-face {
+    font-family: found;
+    src: url(/FoundersGrotesk-Semibold.ttf);
+  }
+.nav{
+  font-family: neu;
+  
+}
+.about{ 
+  font-family: neu;
+  
+}
+.featured{ 
+  font-family: neu;
+  
+}
+.marker{
+  font-family: found;
+}
+.text{
+  font-family: found;
+}
+.heading{
+  font-family: found;
+}
+.heading2{
+  font-family: found;
+}
+.dets{
+  font-family: neu;
+}
+.name{
+  font-family: neu;
+}
+
+@media (max-width: 600px) {
+  html {
+    overflow: auto !important;
+}
+  .links{
+    display: none;
+  }
+  .silder{
+    display: block;
+  }
+  .nav{
+    padding: 8vw;
+  }
+  .textstructure{
+    padding: 8vw;
+    margin-top: 22vw;
+   
+    /* background-color: wheat; */
+  }
+  .landing{
+    
+    margin-top: 8vw;
+    padding-right: 8vw;
+    padding-left: 8vw;
+    padding-top: 4vw;
+    font-size: 2.5vw;
+    padding-bottom: 1vw;
+  }
+  .lntext{
+    font-size: 16vw;
+  }
+  .start{
+    padding: 1vw 4vw;
+    font-size: 2vw;
+  }
+  .rr{
+   height: 8vw;
+   width: 12vw;
+  }
+  .marquee{
+    padding-top: 8vw;
+    margin-top: 10vw;
+    /* margin-top: -110vw; */
+  }
+  .about{
+    font-size: 2vw; 
+    padding: 6vw 6vw;
+    overflow: hidden;
+    
+    
+  }
+  .ab{
+    overflow: hidden;
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5;
+    font-size: 2vw;
+    width: 100%;
+    /* background-color: aliceblue; */
+  }
+  .one{
+    width: 100%;
+    overflow: hidden;
+  }
+  .abouttext{
+    
+    font-size: 12vw;
+  }
+  .aboutbtn{
+    margin-top: 5vw;
+    padding: 5vw 10vw;
+    font-size: 4vw;
+  }
+  .aboutimg{
+    width: 100%;
+    height: 70%;
+  }
+  .eyes>div{
+    height: 40%;
+    /* display: none; */
+  }
+ .black{
+    background-color: black;
+    position: relative;
+ }
+ .featured{
+  margin-top: -136vw;
+  padding-top: 6vw 6vw;
+ }
+ .Fone{
+  padding: 6vw 6vw;
+ }
+ .ftext{
+   font-size: 11vw;
+   padding-top: 8vw;
+   padding-bottom: 4vw;
+ }
+ .cardp{
+  padding-left: 6vw;
+  padding-right: 6vw;
+ }
+ .cards:nth-of-type(1){
+  display: flex;
+  flex-direction: column;
+  gap: 30vw;
+ }
+ .cards:nth-of-type(2){
+  display: flex;
+  flex-direction: column;
+  gap: 40vw;
+  margin-top: 55vw;
+ }
+ .cardcontainer{
+  width: 100%;
+  height: 46vh;
+  
+ }
+ .name{
+  font-size: 5vw;
+ }
+ .point{
+  height: 3vw;
+  width: 3vw;
+ }
+ .btnp{
+  display: flex;
+  flex-wrap: wrap;
+ }
+ .box{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60vw;
+  padding: 6vw 6vw;
+  gap: 16vw;
+ }
+ .cardc{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+ }
+ .card{
+   width: 100%;
+   height: 50vh;
+   margin-bottom: 2vw;
+ }
+ .footer{
+  display: flex;
+  flex-direction: column;
+  padding: 6vw 6vw;
+  height: fit-content;
+ }
+ .footr{
+  height: fit-content;
+ }
+ .heading2{
+  display: flex;
+  flex-direction: column;
+  gap: 8vw;
+  padding: 2vw;
+  font-size: 10vw;
+ }
+ .htext{
+   font-size: 18vw;
+ }
+ .dets{
+  margin-top: 20vw;
+ }
+ .svg{
+  display: none;
+ }
+ .footerLogo{
+  display: block;
+  margin-top: 80vw;
+ }
+}
