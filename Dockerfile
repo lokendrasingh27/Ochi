@@ -1,28 +1,29 @@
-# --- build stage ---
-FROM node:19-alpine AS build
+# Stage 1 — build the React app
+FROM node:20-alpine AS builder
 WORKDIR /app
 
-# install deps (use package-lock if present)
+# Install dependencies (use package-lock if present)
 COPY package*.json ./
-RUN npm ci --silent
+RUN npm install
 
-# copy source and build
+# Copy source and build
 COPY . .
+
+#Build the app
 RUN npm run build
 
-# --- production stage ---
-FROM node:19-alpine AS prod
-WORKDIR /app
+# Stage 2 — serve the build with 'serve'
+FROM node:20-alpine 
 
-# lightweight static server that respects $PORT
-RUN npm install -g serve@14 --silent
+# Install 'serve' to serve the build folder
+RUN npm install -g serve
 
-# copy built files from build stage
+# Copy the build folder from the previous stage
 COPY --from=build /app/build ./build
 
-# Cloud Run uses PORT env; expose 8080 (convention)
-ENV PORT 8080
+# Expose the port and start the app
+
 EXPOSE 8080
 
-# start server on $PORT
-CMD ["sh", "-c", "serve -s build -l $PORT"]
+# Run the app with 'serve'
+CMD ["serve", "-s", "build", "-l", "8080"]
