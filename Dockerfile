@@ -1,5 +1,5 @@
 # --- build stage ---
-FROM node:18-alpine AS build
+FROM node:19-alpine AS build
 WORKDIR /app
 
 # install deps (use package-lock if present)
@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # --- production stage ---
-FROM node:18-alpine AS prod
+FROM node:19-alpine AS prod
 WORKDIR /app
 
 # lightweight static server that respects $PORT
